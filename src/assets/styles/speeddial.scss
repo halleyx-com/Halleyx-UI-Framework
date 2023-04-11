@@ -1,0 +1,200 @@
+@keyframes pop-in {
+    0% { 
+        transform: scale(0);
+    }
+    100% { 
+        transform: scale(1);
+    }
+}
+@keyframes pop-out {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@mixin circle($size) {
+  display: inline-block;  
+  border-radius: 50%;
+  @if $size == small {
+    width: 38px;
+    height: 38px;
+    font-size: var(--hlx-icon-size-sm);
+    line-height: 60px;
+  }
+  @else if $size == tiny {
+    width: 38px;
+    height: 38px;
+    font-size: var(--hlx-icon-size-sm);
+    line-height: 38px;
+  }
+}
+
+.speed-dial {
+    text-align: center;
+    display: inline-block;
+    width: 38px;
+    font-family: var(--hlx-font-type-content);
+    div,
+    div:hover,
+    div:active,
+    div:visited
+    div:focus 
+    {
+        text-decoration: none;
+    }
+    .toggle {
+        cursor: pointer;
+        @include circle(small);
+        display: flex;
+        background: var(--hlx-color-primary);
+        border: none;
+        margin: 8px 0;
+        .circle{
+            i{
+
+                color: #fff;
+            }
+        }
+    }
+    &:hover .dials .circle {
+        display: flex;
+        animation: pop-in .3s ease both;
+    }
+    .dials {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .circle {
+            cursor: pointer;
+            @include circle(tiny);
+            display: flex;
+            margin: 8px 0;
+            transform: scale(0);
+            background: #fff;
+            border: 1px solid var(--hlx-color-primary);
+            display: none;
+            // animation: pop-out .3s ease both;
+            &:hover{
+                background: var(--hlx-color-primary-light);
+                border: 1px solid var(--hlx-color-primary-dark);
+                i{
+
+                    color: var(--hlx-color-primary-dark)
+                }
+            }
+        }
+        .circle.pop-in {
+            animation: pop-in .3s ease both;
+            &:hover{
+                background: var(--hlx-color-primary-light);
+                border: 1px solid var(--hlx-color-primary-dark);
+                i{
+
+                    color: var(--hlx-color-primary-dark)
+                }
+            }
+        }
+        @for $i from 0 through 6 {
+             li:nth-child(#{$i}) a { 
+                 animation-delay: $i * 0.1s; 
+             }
+        }
+    }
+}
+.speed-dial-horizontal {
+    font-family: var(--hlx-font-type-content);
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    div,
+    div:hover,
+    div:active,
+    div:visited
+    div:focus 
+    {
+        text-decoration: none;
+    }
+    .toggle {
+        cursor: pointer;
+        @include circle(small);
+        display: flex;
+        background: var(--hlx-color-primary);
+        border: none;
+        margin: 8px 8px 8px 0;
+        .circle{
+            i{
+
+                color: #fff;
+            }
+        }
+    }
+    &:hover .dials .circle {
+        display: flex;
+        animation: pop-in .3s ease both;
+    }
+    .dials {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .circle {
+            cursor: pointer;
+            @include circle(tiny);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 8px;
+            transform: scale(0);
+            background: #fff;
+            border: 1px solid var(--hlx-color-primary);
+            display: none;
+            animation: pop-out .3s ease both;
+            &:hover{
+                background: var(--hlx-color-primary-light);
+                border: 1px solid var(--hlx-color-primary-dark);
+                i{
+
+                    color: var(--hlx-color-primary-dark)
+                }
+            }
+        }
+        .circle.pop-in {
+            animation: pop-in .3s ease both;
+            &:hover{
+                background: var(--hlx-color-primary-light);
+                border: 1px solid var(--hlx-color-primary-dark);
+                i{
+
+                    color: var(--hlx-color-primary-dark)
+                }
+            }
+        }
+        @for $i from 0 through 6 {
+             li:nth-child(#{$i}) a { 
+                 animation-delay: $i * 0.1s; 
+             }
+        }
+    }
+}
+
+.ic{
+    color: #fff !important;
+    font-size: var(--hlx-icon-size-sm) !important;
+}
+
+.ico{
+    i{
+        color: var(--hlx-color-primary);
+        font-size:var(--hlx-icon-size-sm);
+    }
+}

@@ -1,0 +1,159 @@
+import vue from "rollup-plugin-vue";
+import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import scss from "rollup-plugin-scss";
+import { terser } from "rollup-plugin-terser";
+import babel from "@rollup/plugin-babel";
+import image from "@rollup/plugin-image";
+import {nodeResolve} from "@rollup/plugin-node-resolve";
+import replace from "@rollup/plugin-replace";
+import commonjs from '@rollup/plugin-commonjs';
+const capitalize = (s) => {
+  if (typeof s !== "string") return "";
+  console.log(s.charAt(0).toUpperCase() + s.slice(1), "packbae");
+  return s.charAt(0).toUpperCase() + s.slice(1);
+};
+
+import copy from "rollup-plugin-copy";
+export default [
+  {
+    // input: "src/index.js",
+    // output: {
+    //   format: "umd",
+    //   file: "dist/umd/index.umd.js",
+    //   name: "HalleyKit",
+    //   esModule: false,
+    //   sourcemap: true,
+    //   exports: "named",
+    //   moduleId:'HalleyKit',
+    //   moduleNmae:'HalleyKit',
+    //   globals: {
+    //     vue: "Vue",
+    //     "vue-draggable-next": "vueDraggableNext",
+    //     "vue3-country-flag-icon": "CountryFlag",
+    //     "vue3-apexcharts": "VueApexCharts",
+    //     "chart.js": "chart_js",
+    //     "chartjs-chart-geo": "ChartGeo",
+    //   },
+    // },
+
+    // UMD
+    input: "src/index.js",
+    // plugins: [
+    //   resolve(),
+    //   terser(),
+    //   scss()
+    // ],
+    output: {
+      format: "umd",
+      file: `dist/umd/index.umd.min.js`,
+      exports: "named",
+      name: "HalleyKit", // this is the name of the global object
+      sourcemap: true,
+      globals: {
+            vue: "Vue",
+            "vue-draggable-next": "vueDraggableNext",
+            "vue3-country-flag-icon": "CountryFlag",
+            "vue3-apexcharts": "VueApexCharts",
+            "chart.js": "chart_js",
+            "chartjs-chart-geo": "ChartGeo",
+          },
+    },
+    plugins: [
+      vue({
+        preprocessStyles: true,
+        compileTemplate: true,
+        css: true,
+      }),
+      babel({
+        babelHelpers: "bundled",
+      }),
+      peerDepsExternal(),
+      nodeResolve({
+        extensions: [ '.js','.mjs'],
+      }),
+      // commonjs(),
+      replace({
+        preventAssignment: true,
+        include: ["src/assets/icons/*.css"],
+        values: {
+          "./": "../dist/src/assets/",
+        },
+        delimiters: ["", ""],
+      }),
+   
+     
+     
+      copy({
+        targets: [{ src: "src/assets/*", dest: "dist/src/assets/" }],
+      }),
+      scss({
+        outputStyle: "compressed",
+      }),
+      image(),
+      // terser()
+
+    ],
+    external: [
+      vue,
+      "apexcharts",
+      "vue3-apexcharts",
+      "chart.js",
+      "vue3-country-flag-icon",
+      "chartjs-chart-geo",
+      "vue-draggable-next",
+      "vue3-country-flag-icon/dist/CountryFlag.css",
+    ],
+  },
+  {
+    input: "src/index.js",
+    output: [
+      {
+        name:'HalleyKit',
+        format: "esm",
+        file: "dist/esm/index.mjs",
+        exports: "named",
+      },
+      {
+        name:'HalleyKit',
+        format: "cjs",
+        file: "dist/cjs/index.js",
+        exports: "named",
+      },
+    ],
+    plugins: [
+      replace({
+        preventAssignment: true,
+        include: ["src/assets/icons/*.css"],
+        values: {
+          "./": "../dist/src/assets/",
+        },
+        delimiters: ["", ""],
+      }),
+      vue({
+        preprocessStyles: true,
+        compileTemplate: true,
+        css: true,
+      }),
+      peerDepsExternal(),
+      nodeResolve({
+        extensions: ['.mjs', '.js', '.json', '.ts'],
+      }),
+      copy({
+        targets: [{ src: "src/assets/*", dest: "dist/src/assets/" }],
+      }),
+      scss({
+        outputStyle: "compressed",
+      }),
+      image(),
+    ],
+    external: [
+      "apexcharts",
+      "vue3-apexcharts",
+      "chart.js",
+      "vue3-country-flag-icon",
+      "chartjs-chart-geo",
+      "vue-draggable-next",
+      "vue3-country-flag-icon/dist/CountryFlag.css",
+    ],
+  },
+];

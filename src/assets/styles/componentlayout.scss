@@ -1,0 +1,150 @@
+
+@import './common/var.scss';
+
+.component-heading, .component-side-heading{
+    font-family: Quicksand;
+    margin:50px 0 20px 0;
+}
+.component-heading{
+    font-family: Quicksand;
+    margin: 50px 0 20px 0;
+    display: flex;
+    align-items: center;
+  &>img{
+    width: 35px;
+    object-fit: cover;
+    margin-left: 5px;
+    height: auto;
+}
+}
+.component-side-heading{
+    margin: 30px 0 20px 0;
+  font-size: 20px ;
+
+}
+.component-description{
+    font-size: 14px;
+    line-height: 2;
+    // text-indent: 50px;
+}
+.icon-size{
+    list-style-type: none;
+    font-size: 14px;
+    
+    li{
+        font-family: OpenSans;
+        margin: 20px 20px 20px 0;
+
+    }
+}
+.notes{
+    padding: 10px;
+    font-size: 14px;    
+    width: 100%;
+    background-color: $primary-color-light;
+    border-left: 3px solid $primary-color-dark;
+    border-radius: 5px;
+    display: inline-flex;
+    .note-title{
+        font-weight: bold;
+    }
+    .note-body{
+        margin-left: 10px;
+        word-spacing: 2px;
+    }
+}
+.component-example{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 40px 0;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+
+    .example-body{
+        height: 100%;
+        display: flex;
+        padding: 20px;
+        gap: 15px;
+        overflow: inherit;
+        flex-direction: column;
+    }
+    .example-body1{
+        height: 300px;
+        padding: 20px;
+        overflow: visible;
+    }
+    .example-body2{
+        height: 66px;
+        padding: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        overflow: visible;
+    }
+    .example-body4{
+        // height: 66px;
+        padding: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        overflow: visible;
+    }
+    .example-body3{
+        height: 100%;
+        display: flex;
+        padding: 20px;
+        overflow: auto;
+        flex-direction: column;
+    }
+    
+    .example-footer{
+        height: 40px;
+        display: flex;
+        padding: 0 20px;
+        justify-content: flex-end;
+        align-items: center;
+        border-top: 1px solid $border-color;
+        .icon-code-regular::before{
+            font-size: var(--hlx-icon-size-sm);
+            color: $font-color;
+        }
+        .icon{
+            font-size: 14px !important;
+            margin-left: 10px;
+            height: 30px;
+            width: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            &:hover{
+                cursor: pointer;
+                background-color: $primary-color-light;
+                color: $primary-color;
+            }
+        }
+        .active-icon {
+            margin-left: 10px;
+            height: 30px;
+            width: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            background-color: $primary-color;
+            color: white;
+            .icon-code-regular::before{
+                font-size: var(--hlx-icon-size-md);
+                color: white
+            }
+            &:hover{
+                cursor: pointer;
+                background-color: $primary-color-light;
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.hljs{
+    font-size: 14px !important;
+}

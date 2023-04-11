@@ -1,0 +1,342 @@
+@use "sass:map";
+@use "sass:math";
+/*/* Element Chalk Variables */
+@import "../mixins/config.scss";
+@import "../mixins/functions.scss";
+
+$--types: primary, success, warning, error, info;
+
+/* Color
+-------------------------- */
+$--colors: () !default;
+$--colors: map.deep-merge(
+  (
+    "white": #ffffff,
+    "black": #000000,
+    "primary": (
+      "dark":#265E4B,
+      "base": #54bd95,
+      "light": #a8dec9,
+      "lighter": #e4fff5,
+
+    ),
+    "success": (
+      "dark": #00954a,
+      "base": #02b55c,
+      "light": #dcf9ea,
+    ),
+    "warning": (
+      "dark": #ff9500,
+      "base": #f8a523,
+      "light": #f9ecd7,
+    ),
+    "error": (
+      "dark": #fc3232,
+      "base": #ff5050,
+      "light": #ffe8e8,
+    ),
+    "info": (
+      "dark": #0065b2,
+      "base": #2879b7,
+      "light": #d8edfc,
+    ),
+    "link": (
+      "dark": #143c5b,
+      "base": #2879b7,
+      "light": #d8edfc,
+    ),
+    "disable": (
+      "dark": #6f5c90,
+      "base": #ece9f1,
+      "text": #d0c9d6,
+    ),
+    
+    "sidebar": ( 
+      "base": #001723,
+    ),
+
+  ),
+  $--colors
+  );
+  
+  $--color-white: map.get($--colors, "white") !default;
+  $--color-black: map.get($--colors, "black") !default;
+  /*Primary colors*/
+  $--color-primary-dark: map.get($--colors, "primary", "dark") !default;
+  $--color-primary: map.get($--colors, "primary", "base") !default;
+  $--color-primary-light: map.get($--colors, "primary", "light") !default;
+  $--color-primary-lighter: map.get($--colors, "primary", "lighter") !default;
+  /*success colors*/
+  $--color-success-dark: map.get($--colors, "success", "dark") !default;
+  $--color-success: map.get($--colors, "success", "base") !default;
+  $--color-success-light: map.get($--colors, "success", "light") !default;
+  /*warning colors*/
+  $--color-warning-dark: map.get($--colors, "warning", "dark") !default;
+  $--color-warning: map.get($--colors, "warning", "base") !default;
+  $--color-warning-light: map.get($--colors, "warning", "light") !default;
+  /*error colors*/
+  $--color-error-dark: map.get($--colors, "error", "dark") !default;
+  $--color-error: map.get($--colors, "error", "base") !default;
+  $--color-error-light: map.get($--colors, "error", "light") !default;
+  /*info colors*/
+  $--color-info-dark: map.get($--colors, "info", "dark") !default;
+  $--color-info: map.get($--colors, "info", "base") !default;
+  $--color-info-light: map.get($--colors, "info", "light") !default;
+  /*link colors*/
+  $--color-link-dark: map.get($--colors, "link", "dark") !default;
+  $--color-link: map.get($--colors, "link", "base") !default;
+  $--color-link-light: map.get($--colors, "link", "light") !default;
+  /*disable colors*/
+  $--color-disable-dark: map.get($--colors, "disable", "dark") !default;
+  $--color-disable: map.get($--colors, "disable", "base") !default;
+  $--color-disable-text: map.get($--colors, "disable", "text") !default;
+  
+  $--color-sidebar: map.get($--colors, "sidebar", "base") !default;
+
+$--text-color: () !default;
+$--text-color: map.merge(
+  (
+    'primary': #191a15,
+    'secondary': #fbfbfb,
+    'disable': #d0c9d6,
+    'tree': #222f2b,
+  ),
+  $--text-color
+);
+$--text-color: () !default;
+$--text-color: map.merge(
+  (
+    'primary': #191a15,
+    'secondary': #fbfbfb,
+    'disable': #d0c9d6,
+    'tree': #222f2b,
+  ),
+  $--text-color
+);
+/*Borders*/
+$--border-color: () !default;
+$--border-color: map.merge(
+  (
+    '': #d8d8d8,
+    'dark': #a6a6a6,
+    'light': #ebebeb,
+    'lighter': #f7f7f7,
+    
+  ),
+  $--border-color
+);
+/*variables*/
+$--variables: () !default;
+$--variables: map.merge(
+  (
+    'border-radius': 5px,
+    'border-radius-round': 100px,
+    
+  ),
+  $--variables
+);
+$--line-height: () !default;
+$--line-height: map.merge(
+  (
+    xs:1.125rem,
+    sm:1.25rem,
+    '':1.5rem,
+    lg:1.75rem,
+    xl:1.875rem,
+    xxl:2rem,
+    
+  ),
+  $--line-height
+);
+$--font: () !default;
+$--font: map.deep-merge(
+  (
+    'type':(
+      'title':'QuickSand',
+      'content':'OpenSans',
+    ),
+    'header-size':(
+
+      '':2.25rem,
+      'sm':1.875rem,
+      'lg':3rem,
+      'xl':3.75rem,
+      'xxl':4.5rem,
+    ),
+    'content-size':(
+      '':1rem,
+      'xs':0.75rem,
+      'sm':0.875rem,
+      'lg':1.125rem,
+      'xl':1.25rem,
+    ),
+    
+  ),
+  $--font
+);
+
+  /*Fonts*/
+  $dev: true;
+  @debug "#{$dev}";
+  $--font-path: "../fonts" !default;
+  $--font-pathd: -font-path($dev);
+  @debug "#{$--font-pathd}";
+  $--font-display: "auto" !default;
+  $--font-type-content: map.get($--font,'type','content');
+  $--font-type-title: map.get($--font,'type','title');
+$--icon:() !default;
+$--icon: map.merge(
+(
+  xs:1rem,
+  sm:1.25rem,
+  md:1.5rem,
+  lg:2rem,
+  xl:2.25rem,
+),
+$--icon
+);
+
+  $border-color: #d8d8d8; /*changed as border-color*/
+  
+  
+  $border-color-secondary: #ebebeb;/*changed as border-color-light*/
+  
+  $grey: #ebebeb;/*changed as border-color-light*/
+  
+  $grey-light: #f7f7f7;/*changed as border-color-lighter*/
+  
+  $grey-dark: #a6a6a6;/*changed as border-color-dark*/
+
+
+  $font-path: $--font-pathd;
+
+  $primary-success-dark: #00954a;
+  $primary-success: #02b55c;
+  $secondary-success: #dcf9ea;
+  
+  $primary-error-dark: #fc3232;
+  $primary-error: #ff5050;
+  $secondary-error: #ffe8e8;
+  
+  $primary-info-dark: #0065b2;
+  $primary-info: #2879b7;
+  $secondary-info: #d8edfc;
+  
+  $primary-warning-dark: #ff9500;
+  $primary-warning: #f8a523;
+  $secondary-warning: #f9ecd7;
+  
+  $primary-link: #2879b7;
+  
+  $secondary-link: #d8edfc;
+  
+  $primary-color: #54bd95;
+  
+  $primary-bg-light: #a8dec9;
+  
+  $primary-color-dark: #265E4B;
+  
+  $primary-disabled: #ece9f1;
+  $primary-disabled-text: #d0c9d6;
+  
+  $primary-color-light: #a8dec9;
+  $primary-color-light-opacity: #e4fff5;
+  
+  $secondary-color: #ffffff;
+  
+  $secondary-color-green-light: #dcfae9;
+  
+  $secondary-color-red: #ff5050;
+  
+  $secondary-color-blue: #2879b7;
+  
+  $secondary-color-blue-light: #d8edfc;
+  
+  $secondary-color-dark: #161c28;
+  
+  $primary-text-color: #fbfbfb;
+  
+  /*Testing
+  $--dev:$dev;
+  */
+  
+  $font-color: #191a15; /*changed as text-color-primary*/
+  
+  
+  $sidebar-color: #222938; /*changed as color-sidebar*/
+  
+  $primary-tree-text: #222f2b;/*changed as text-color-tree*/
+  
+  
+ 
+  
+  $gradiant-left: linear-gradient(to left, #54bd95, #265E4B);
+  
+  $gradiant-right: linear-gradient(to right, #54bd95, #265E4B);
+  
+  $gradiant-down: linear-gradient(180deg, #54bd95, #265E4B);
+  
+  $gradiant-up: linear-gradient(360deg, #54bd95, #265E4B);
+  
+  
+  $border-radius: 5px; /*changed as border-radius*/
+  
+  $border-radius-round: 100px;/*changed as border-radius-round*/
+  
+  /* Standard font styles */
+  
+  $title-font: QuickSand; /*changed as font-type-tittle*/
+  
+  $content-font: OpenSans;  /*changed as font-type-content*/
+  
+  
+  
+  $icon-xs: 1rem;  /*changed as icon-size-xs*/
+  
+  $icon-sm: 1.25rem;  /*changed as icon-size-sm*/
+  
+$icon-md: 1.5rem;  /*changed as icon-size-md*/
+   
+  $icon-lr: 2rem;  /*changed as icon-size-lg*/
+  
+  $icon-xl: 2.25rem;  /*changed as icon-size-xl*/
+  
+  $header-font-size: 20px;  /*changed as icon-size-tittle*/
+  
+  /* Standard header font styles */
+  
+  $font-h-xxl: 4.5rem;  /*changed as font-header-size-xxl*/
+  
+  $font-h-xl: 3.75rem;  /*changed as font-header-size-xl*/
+  
+  $font-h-lg: 3rem;  /*changed as font-header-size-lg*/
+  
+  $font-h-md: 2.25rem;  /*changed as font-header-size*/
+  
+  $font-h-sm: 1.875rem;  /*changed as font-header-size-sm*/
+  /*line-height*/
+  $line-height-xxl: 2rem;  /*changed as line-height-tittle*/
+  $line-height-xl: 1.875rem;  /*changed as line-height-tittle*/
+  $line-height-lg: 1.75rem;  /*changed as line-height-tittle*/
+  $line-height-md: 1.5rem;  /*changed as line-height-tittle*/
+  $line-height-sm: 1.25rem;  /*changed as line-height-tittle*/
+  $line-height-xs: 1.125rem;  /*changed as line-height-tittle*/
+  /* Standard content font styles */
+  
+  $font-c-xl: 1.25rem;  /*changed as font-content-size-xl*/
+  
+  $font-c-lg: 1.125rem;  /*changed as font-content-size-lg*/
+  
+  $font-c-md: 1rem;  /*changed as font-content-size*/
+  
+  $font-c-sm: 0.875rem;  /*changed as font-content-size-sm*/
+  
+  $font-c-xs: 0.75rem;  /*changed as font-content-xs*/
+  
+  .right-panel {
+    font-family: $content-font;
+  }
+  .left-panel {
+    font-family: $content-font;
+  }
+  

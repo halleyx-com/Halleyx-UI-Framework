@@ -1,0 +1,77 @@
+@use "sass:map";
+@use "./mixins/var" as *;
+@use "./mixins/functions.scss" as *;
+@import "./common/var.scss";
+
+:root {
+  /*Basic*/
+  --hlx-color-black: #{$--color-black};
+  --hlx-color-white: #{$--color-white};
+
+  /*Primary*/
+  --hlx-color-primary-dark: #{$--color-primary-dark};
+  --hlx-color-primary: #{$--color-primary};
+  --hlx-color-primary-light: #{$--color-primary-light};
+  --hlx-color-primary-lighter: #{$--color-primary-lighter};
+
+  /*success*/
+  --hlx-color-success-dark: #{$--color-success-dark};
+  --hlx-color-success: #{$--color-success};
+  --hlx-color-success-light: #{$--color-success-light};
+
+  /*warning*/
+  --hlx-color-warning-dark: #{$--color-warning-dark};
+  --hlx-color-warning: #{$--color-warning};
+  --hlx-color-warning-light: #{$--color-warning-light};
+
+  /*error*/
+  --hlx-color-error-dark: #{$--color-error-dark};
+  --hlx-color-error: #{$--color-error};
+  --hlx-color-error-light: #{$--color-error-light};
+
+  /*info*/
+  --hlx-color-info-dark: #{$--color-info-dark};
+  --hlx-color-info: #{$--color-info};
+  --hlx-color-info-light: #{$--color-info-light};
+
+  /*link*/
+  --hlx-color-link-dark: #{$--color-link-dark};
+  --hlx-color-link: #{$--color-link};
+  --hlx-color-link-light: #{$--color-link-light};
+
+  /*disable*/
+  --hlx-color-disable-dark: #{$--color-disable-dark};
+  --hlx-color-disable: #{$--color-disable};
+  --hlx-color-disable-text: #{$--color-disable-text};
+  --hlx-font-type-content:#{$--font-type-content};
+  --hlx-font-type-title:#{$--font-type-title};
+  //  @each $type in (primary, success, warning, error, info,link) {
+  //   @include set-css-color-rgb($type);
+  // }
+  @each $type
+    in (primary, success, warning, error, info, link, disable, sidebar)
+  {
+    @include set-css-color-rgb($type);
+  }
+  @each $type in (sidebar) {
+    @include set-css-color-type($type);
+  }
+  //  @each $type in (light) {
+  //   @include set-css-border-color-rgb($type);
+  // }
+  @each $type in (primary, secondary, tree, disable) {
+    @include set-css-text-type($type);
+  }
+  @each $type in ( header-size, content-size) {
+    @include set-css-font-type($type);
+  }
+  @each $type in (dark, light, lighter, "") {
+    @include set-css-border-type($type);
+  }
+  @each $type in (sm, xs, lg, "", xl, xxl) {
+    @include set-css-line-height-type($type);
+  }
+  @each $type in (sm, xs, lg, xl, md) {
+    @include set-css-icon-type($type);
+  }
+}

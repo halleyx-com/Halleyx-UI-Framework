@@ -1,0 +1,15 @@
+.color-container{
+    height: 100px;
+    width: 100px;
+    padding: 5px;
+    .color-area{
+        width: 90%;
+        height: 90%;
+    }
+    .color-value{
+        height: 10%;
+        width:100%;
+        background-color: blue;
+        color: red;
+    }
+}

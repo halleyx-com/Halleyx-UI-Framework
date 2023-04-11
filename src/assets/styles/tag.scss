@@ -1,0 +1,102 @@
+.hlx-tag {
+  display: flex;
+  // padding: 0.2rem 0 0.2rem 0.3rem;
+  padding: 6px;
+  min-width: min-content;
+  max-height: 28px;
+  // border-radius: 4px;
+  border-radius: 6px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-weight: 500;
+  letter-spacing: .005em;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: center;
+  color: white;
+  background-color: var(--hlx-color-primary);
+  color: var(--hlx-color-white);
+  &:hover {
+    cursor: default;
+    // color: var(--hlx-color-primary-light);
+    background-color: var(--hlx-color-primary-dark);
+  }
+
+  & > .content {
+    font-size: 12px;
+    max-width: 10ch;
+    line-height: 2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  & > i {
+    font-size: 15px;
+    margin-left: auto;
+    cursor: pointer;
+  }
+  &.info {
+    background-color: var(--hlx-color-info-light);
+    color: var(--hlx-color-info);
+    &:hover {
+      cursor: default;
+      color: var(--hlx-color-info-light);
+      background-color: var(--hlx-color-info);
+    }
+  }
+
+  &.warning {
+    background-color: var(--hlx-color-warning-light);
+    color: var(--hlx-color-warning);
+    &:hover {
+      cursor: default;
+      color: var(--hlx-color-warning-light);
+      background-color: var(--hlx-color-warning);
+    }
+  }
+
+  &.danger {
+    color: var(--hlx-color-error);
+    background-color: var(--hlx-color-error-light);
+    &:hover {
+      cursor: default;
+      background-color: var(--hlx-color-error);
+      color: var(--hlx-color-error-light);
+    }
+  }
+
+  &.success {
+    background-color: var(--hlx-color-success-light);
+    color: getCssVar("color", "success");
+    &:hover {
+      cursor: default;
+      background-color: getCssVar("color", "success");
+      color: var(--hlx-color-success-light);
+    }
+  }
+  &.disable {
+    background: var(--hlx-color-disable);
+    color: var(--hlx-border-color-dark);
+    &:hover {
+      cursor: default;
+      color: var(--hlx-color-disable);
+      background: var(--hlx-border-color-dark);
+    }
+  }
+
+  // &.-normal{
+  //     background-color: $primary-color;
+  // }
+  // // // Sizes
+  // &.-medium {
+  //     font-size: 1.0rem;
+  //     padding: .1rem .65rem .2rem;
+  // }
+
+  // &.-small {
+  //     font-size: .7rem;
+  //     padding: .05rem .4rem .15rem;
+  // }
+}

@@ -1,0 +1,150 @@
+@mixin margin($margin-top:0,$margin-right:0,$margin-down:0,$margin-left:0){
+    margin: $margin-top $margin-right $margin-down $margin-left;
+} 
+@mixin flex-prop {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.right-container-signup{
+    background-color: #FFFFFF;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+            .login-form{
+
+                width: 400px;
+                .sign-in-text{
+                    display: flex;
+                    width: 100%;
+                    justify-content: flex-start;
+                h2{
+                    color: var(--hlx-text-color-primary);
+                    font-weight: lighter;
+                    margin-bottom: 15px;
+                    font-size: 24px;
+                }
+                }
+                .forgot-pssword{
+                    color: var(--hlx-text-color-primary);
+                    font-size: 14px;
+                    margin-bottom: 15px;
+                    float: right;
+                    cursor: pointer;
+                    &:hover{
+                        color: var(--hlx-color-primary);
+                    }
+
+                }
+                .quotes-container{
+                    font-size: 14px;
+                    .black-frame{
+                        color: var(--hlx-text-color-primary);
+                        .signup-text{
+                            text-decoration: none;
+                            cursor: pointer;
+                            color: var(--hlx-color-primary);
+
+                        }
+
+                    }
+
+                }
+    
+                button{
+                    width:100% ;
+                    border-radius: 4px;
+                    border: none;
+                    margin-bottom: 15px;
+                    padding: 10px 24px 10px 24px;
+                    color: #fff;
+                    background-color: var(--hlx-color-primary);
+                    cursor: pointer;
+                }
+                // button:hover{
+                //     background-color: var(--hlx-color-primary)-dark;
+                //     color: var(--hlx-color-primary);
+                // }
+                
+            }
+                .create-password{
+                    margin-bottom: 15px;
+                }
+
+        
+
+    
+}
+
+.hlx-signup-container {
+    width: 100%;
+    height: 98%;
+    display: flex;
+    padding: 0;
+    background-color: var(--hlx-border-color-lighter);
+
+
+&>.hlx-signup-left-container{
+    display: flex;
+    height: 100%;
+    width: 50%;
+    .left-sec{
+        width: 85%;
+        .header-logo{
+            height: 20%;
+            img{
+                min-width: 190px;
+                padding: 15px;
+                width: 65%;
+            }
+        }
+        .img-collage{
+            margin-top: 25px;
+            max-height: 75%;
+            width: 90%;
+            margin-left: 45px;
+            img{
+                width: 100%;
+            }
+
+        }
+    }
+    
+    }
+
+&>.dividers{
+    width: 7%;
+    display:flex;
+    flex-direction:column;
+    
+    background-color: var(--hlx-border-color-lighter);
+    .dashedline-start{
+        height:40%;
+        width:45%;
+        margin:0 12px -40px ;
+        border-right: 1.8px dashed var(--hlx-color-primary);
+    }
+    .symbol-x{
+        color: var(--hlx-color-primary);
+        margin-left: 0;
+        font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size:xx-large;
+    }
+    .symbol2-x{
+        color:var(--hlx-border-color-dark);
+        @include margin(10px,0,0,50%);
+            font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size:xx-large; 
+    }
+    .dashedline-end{
+        height:58%;
+        margin: -45px 8px;
+        border-left :1.97px dashed var(--hlx-color-primary);
+        width:45%;
+    }
+}
+
+}

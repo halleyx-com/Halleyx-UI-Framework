@@ -1,0 +1,285 @@
+.hlx-label {
+  max-width: max-content;
+  // min-height: 22px;
+  // max-width: 50px;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  // border-radius: 3px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  // padding: 5px 10px;
+  // font-size: 14px;
+  // font-weight: bold;
+  // gap: 2px;
+  
+  border: 1px solid var(--hlx-border-color);
+  cursor: default;
+  border-radius: 6px;
+
+    height: 28px;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    line-height: 16px;
+    letter-spacing: .5%;
+    padding: 6px;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    // width: 57px;
+
+    //v1.2
+    //primary
+  // &.primary {
+  //   background: var(--hlx-color-primary);
+  //   color: var(--hlx-text-color-secondary);
+  //   border:none !important; 
+  //   &-lite {
+  //     border:none !important; 
+  //     background: var(--hlx-color-primary-light);
+  //     color: var(--hlx-color-primary-dark);
+  //   }
+  //   &-ot {
+  //     border: 1px solid var(--hlx-color-primary);
+  //     color: var(--hlx-color-primary-dark);
+  //   }
+  // }
+  //   //success
+  // &.success {
+  //   background: var(--hlx-color-success);
+  //   color: var(--hlx-text-color-secondary);
+  //   border:none !important; 
+  //   &-lite {
+  //     border:none !important; 
+  //     background: var(--hlx-color-success-light);
+  //     color: var(--hlx-color-success-dark);
+  //   }
+  //   &-ot {
+  //     border: 1px solid var(--hlx-color-success);
+  //     color: var(--hlx-color-success-dark);
+  //   }
+  // }
+  //   //info
+  // &.info {
+  //   background: var(--hlx-color-info);
+  //   color: var(--hlx-text-color-secondary);
+  //   border:none !important; 
+  //   &-lite {
+  //     border:none !important; 
+  //     background: var(--hlx-color-info-light);
+  //     color: var(--hlx-color-info-dark);
+  //   }
+  //   &-ot {
+  //     border: 1px solid var(--hlx-color-info);
+  //     color: var(--hlx-color-info-dark);
+  //   }
+  // }
+  //   //warning
+  // &.warning {
+  //   background: var(--hlx-color-warning);
+  //   color: var(--hlx-text-color-secondary);
+  //   border:none !important; 
+  //   &-lite {
+  //     border:none !important; 
+  //     background: var(--hlx-color-warning-light);
+  //     color: var(--hlx-color-warning-dark);
+  //   }
+  //   &-ot {
+  //     border: 1px solid var(--hlx-color-warning);
+  //     color: var(--hlx-color-warning-dark);
+  //   }
+  // }
+  //   //error
+  // &.error {
+  //   background: var(--hlx-color-error);
+  //   color: var(--hlx-text-color-secondary);
+  //   border:none !important; 
+  //   &-lite {
+  //     border:none !important; 
+  //     background: var(--hlx-color-error-light);
+  //     color: var(--hlx-color-error-dark);
+  //   }
+  //   &-ot {
+  //     border: 1px solid var(--hlx-color-error);
+  //     color: var(--hlx-color-error-dark);
+  //   }
+  // }
+  //   //link
+  // &.link {
+  //   background: var(--hlx-color-link);
+  //   color: var(--hlx-text-color-secondary);
+  //   border:none !important; 
+  //   &-lite {
+  //     border:none !important; 
+  //     background: var(--hlx-color-link-light);
+  //     color: var(--hlx-color-link-dark);
+  //   }
+  //   &-ot {
+  //     border: 1px solid var(--hlx-color-link);
+  //     color: var(--hlx-color-link-dark);
+  //   }
+  // }
+  // &.pill,&.-pill{
+  //   border-radius: 999px;
+  // }
+
+  //v1.1
+  // success
+  // &.success {
+  //   border: 1px solid var(--hlx-color-success-dark);
+  //   background: var(--hlx-color-success);
+  //   color: var(--hlx-text-color-secondary);
+  //   &-lite {
+  //     // border: 1px solid var(--hlx-color-success);
+  //     background: var(--hlx-color-success-light);
+  //     color: var(--hlx-color-success);
+  //   }
+  //   &-lite {
+  //     border: 1px solid var(--hlx-color-success);
+  //     background: var(--hlx-color-success-light);
+  //     color: var(--hlx-color-success);
+  //   }
+  // }
+  // // info
+  // &.info {
+  //   border: 1px solid var(--hlx-color-info-dark);
+  //   background: var(--hlx-color-info);
+  //   color: var(--hlx-text-color-secondary);
+  //   &-lite {
+  //     border: 1px solid var(--hlx-color-info);
+  //     background: var(--hlx-color-info-light);
+  //     color: var(--hlx-color-info);
+  //   }
+  // }
+  // // error
+  // &.error {
+  //   border: 1px solid var(--hlx-color-error-dark);
+  //   background: var(--hlx-color-error);
+  //   color: var(--hlx-text-color-secondary);
+  //   &-lite {
+  //     border: 1px solid var(--hlx-color-error);
+  //     background: var(--hlx-color-error-light);
+  //     color: var(--hlx-color-error);
+  //   }
+  // }
+  // // warning
+  // &.warning {
+  //   border: 1px solid var(--hlx-color-warning-dark);
+  //   background: var(--hlx-color-warning);
+  //   color: var(--hlx-text-color-secondary);
+  //   &-lite {
+  //     border: 1px solid var(--hlx-color-warning);
+  //     background: var(--hlx-color-warning-light);
+  //     color: var(--hlx-color-warning);
+  //   }
+  // }
+  // // link
+  // &.link {
+  //   border: 1px solid var(--hlx-color-link-dark);
+  //   background: var(--hlx-color-link);
+  //   color: var(--hlx-text-color-secondary);
+  //   &-lite {
+  //     border: 1px solid var(--hlx-color-link);
+  //     background: var(--hlx-color-link-light);
+  //     color: var(--hlx-color-link);
+  //   }
+  // }
+  // &.disabled {
+  //   border:none !important;
+    
+  //   background: var(--hlx-color-disable);
+  //   color: var(--hlx-color-disable-text);
+  //   &-lite {
+  //     border:none !important; 
+  //     background: var(--hlx-color-disable);
+  //     color: var(--hlx-color-disable-text);
+  //   }
+  //   &-ot {
+  //     border: 1px solid var(--hlx-color-disable-text);
+  //     color: var(--hlx-color-disable-text);
+  //   }
+  // }
+  //v1.3
+  // primary
+  &.primary {
+    border: 1px solid var(--hlx-color-primary-dark);
+    background: var(--hlx-color-primary-light);
+    color: var(--hlx-color-primary-dark);
+   
+  }
+  // success
+  &.success {
+    border: 1px solid var(--hlx-color-success-dark);
+    background: var(--hlx-color-success-light);
+    color: var(--hlx-color-success);
+    
+  }
+  // info
+  &.info {
+    border: 1px solid var(--hlx-color-info-dark);
+    background: var(--hlx-color-info-light);
+    color: var(--hlx-color-info);
+   
+  }
+  // error
+  &.error {
+    border: 1px solid var(--hlx-color-error-dark);
+    background: var(--hlx-color-error-light);
+    color: var(--hlx-color-error);
+  }
+  // warning
+  &.warning {
+    border: 1px solid var(--hlx-color-warning-dark);
+    background: var(--hlx-color-warning-light);
+    color: var(--hlx-color-warning);
+    
+  }
+  // link
+  &.link {
+    border: 1px solid var(--hlx-color-link);
+    background: var(--hlx-color-link-light);
+    color: var(--hlx-color-link);
+   
+  }
+  &.disabled {
+    
+    border: 1px solid var(--hlx-color-disable-text);
+    background: var(--hlx-color-disable);
+    color: var(--hlx-color-disable-text);
+  }
+  //disabled v1.0
+  // &.disabled {
+  //   border:none !important;
+    
+  //   background: var(--hlx-color-disable);
+  //   color: var(--hlx-color-disable-text);
+  //   &-lite {
+  //     border:none !important; 
+  //     background: var(--hlx-color-disable);
+  //     color: var(--hlx-color-disable-text);
+  //   }
+  //   &-ot {
+  //     border: 1px solid var(--hlx-color-disable-text);
+  //     color: var(--hlx-color-disable-text);
+  //   }
+  // }
+ &.sm {
+  // width: 61px;
+  height: 18px;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: .005em;
+  border-radius: 5px;
+  padding: 1px 3px;
+ }
+ &.lg {
+  height: 38px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: .5%;
+  padding: 11px 10px;
+  border-radius: 6px;
+ }
+}

@@ -1,0 +1,76 @@
+#hlx-step-controler-005.stepper-control-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  .stepper {
+    user-select: none;
+    border-radius: 8px;
+    // box-shadow: 1px 1px 9px -5.7px;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      cursor: pointer;
+    }
+    &.next-stepper {
+      width: 24px;
+      height: 24px;
+      // box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+      //   rgba(0, 0, 0, 0.24) 0px 1px 2px;
+      box-shadow: 0 1px 9px -2px;
+      &:hover:not(.limited) {
+        border: 1px solid var(--hlx-color-primary-dark);
+      }
+      &.limited {
+        border: 1px solid var(--hlx-border-color);
+        cursor: default;
+        i {
+          color: var(--hlx-border-color);
+        }
+      }
+      i {
+        color: var(--hlx-color-primary);
+      }
+    }
+    &.counter {
+      width: 38px;
+      font-size: var(--hlx-font-content-size-sm);
+      height: 38px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 6px,
+        rgba(0, 0, 0, 0.23) 0px 3px 6px;
+      background: var(--hlx-color-primary-dark);
+      .current-page {
+        color: white !important;
+        // font-weight: bolder;
+      }
+    }
+    &.prev-stepper {
+      width: 24px;
+      height: 24px;
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+        rgba(0, 0, 0, 0.24) 0px 1px 2px;
+      display: flex;
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+      &:hover:not(.limited) {
+        border: 1px solid var(--hlx-color-primary-dark);
+      }
+      &.limited {
+        cursor: default;
+
+        border: 1px solid var(--hlx-border-color);
+        i {
+          color: var(--hlx-border-color);
+        }
+      }
+      i {
+        color: var(--hlx-color-primary);
+      }
+    }
+  }
+}

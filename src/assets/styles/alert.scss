@@ -1,0 +1,215 @@
+.hlx-alert-wrapper {
+  width: 325px;
+}
+
+.hlx.alert {
+  font-family: var(--hlx-font-type-content);
+  position: fixed;
+  z-index: 9999;
+  top: 10%;
+  min-width: 15rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  min-height: 36px;
+  box-sizing: border-box;
+  transition: max-height 250ms;
+  overflow: hidden;
+  right: 5%;
+  box-shadow: -2px 3px 20px -13px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 2.5rem 1fr 2.5rem;
+  max-width: 400px;
+  background: white;
+  margin-bottom: 15px;
+  -webkit-animation: runProgress 0.5s ease-in-out;
+  animation: runProgress 0.5s ease-in-out;
+  @keyframes runProgress {
+    0% {
+      opacity: 0;
+      transform: translateX(80px);
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  @keyframes runProgressR {
+    0% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(1000px);
+    }
+  }
+
+  &.close {
+    animation: runProgressR 3s ease-in-out;
+    opacity: 0;
+    font-size: var(--hlx-font-content-size);
+  }
+
+  &.alert > .icon {
+    min-width: 2.5rem;
+    height: auto;
+    border-radius: 8px 0 0 8px;
+    & > i {
+      // font-size: 1rem;
+      font-size: var(--hlx-icon-size-sm);
+
+      color: white;
+    }
+    text-align: center;
+  }
+
+  &.alert > .icon {
+    line-height: 40px;
+    padding: .75 0;
+    
+  }
+
+  &.alert > .text {
+    width: 100%;
+    padding: 0.2rem 0.6rem;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+
+
+    .alert-header{
+      font-size: .875rem;
+      font-weight: 600;
+      line-height: 21.78px;
+      letter-spacing: 0.5%;
+        color: #333;
+    }
+    .alert-description{
+      font-size: 0.875rem;
+      max-height: 75px;
+      font-weight: 400;
+      line-height: 24.78px;
+      letter-spacing: 0.5%;
+        color: #666;
+    }
+  }
+
+  // &.alert > .text strong {
+  // }
+  // &.alert > .text p {
+  //   margin: 5px 0;
+  //   font-size: 14px;
+  // }
+
+  &.alert > .close {
+    border: none;
+    background: transparent;
+    // font-size: 16px;
+    margin-right: 6px;
+    color: #777;
+    outline: none;
+    cursor: pointer;
+    // align-self: baseline;
+    transition: 0.3 ease-in-out;
+    
+    & > i {
+      font-size: var(--hlx-icon-size-xs);
+      color: var(--hlx-color-disable-dark);
+    }
+  }
+
+  /* success alert start */
+  &.alert-success {
+    background-color: var(--hlx-color-success-light);
+    & > .text {
+      strong {
+        color: var(--hlx-color-success);
+      }
+    }
+    & .close>i:hover{
+      color: var(--hlx-color-success);
+    }
+    //   &::before {
+    //       border-color: #00a865;
+    //     }
+  }
+  &.alert-success > .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // font-size: 35px;
+    // color: #00a865;
+    background-color: var(--hlx-color-success);
+  }
+  /* success alert end */
+
+  /* warning alert start */
+  &.alert-warning {
+    background-color: var(--hlx-color-warning-light);
+    & > .text {
+      strong {
+        color: var(--hlx-color-warning);
+      }
+    }
+    & .close>i:hover{
+      color: var(--hlx-color-warning);
+    }
+  }
+  &.alert-warning > .icon {
+    background-color: var(--hlx-color-warning);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // font-size: 35px;
+  }
+  /* warning alert end */
+
+  /* danger alert start */
+  &.alert-danger {
+    background-color: var(--hlx-color-error-light);
+    & > .text {
+      strong {
+        color: var(--hlx-color-error);
+      }
+    }
+    & .close>i:hover{
+      color: var(--hlx-color-error);
+    }
+  }
+  &.alert-danger > .icon {
+    background-color: var(--hlx-color-error);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // font-size: 35px;
+  }
+  /* danger alert end */
+
+  /* primary alert start */
+  &.alert-primary {
+    background-color: var(--hlx-color-link-light);
+    & > .text {
+      strong {
+        color: var(--hlx-color-link);
+      }
+    }
+    & .close>i:hover{
+      color: var(--hlx-color-link);
+    }
+  }
+  &.alert-primary > .icon {
+    background-color: var(--hlx-color-link);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // font-size: 35px;
+  }
+}

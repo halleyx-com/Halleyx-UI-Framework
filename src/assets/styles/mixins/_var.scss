@@ -1,0 +1,89 @@
+@use 'sass:map';
+
+@use 'config.scss';
+@use 'functions.scss' as *;
+@import '../common/var.scss';
+
+@mixin set-css-color-type($type) {
+  --hlx-color-#{$type}: #{map.get($--colors, $type, "base")};
+}
+@mixin set-css-var-type($name, $type, $--variables) {
+  --hlx-#{$name}-#{$type}: #{map.get($--variables, $type)};
+}
+@mixin set-css-text-type($type) {
+  --hlx-text-color-#{$type}: #{map.get($--text-color, $type)};
+}
+@mixin set-css-icon-type($type) {
+  --hlx-icon-size-#{$type}: #{map.get($--icon, $type)};
+}
+@mixin set-css-border-type($type) {
+  @if $type == ''{
+    --hlx-border-color: #{map.get($--border-color, $type)};
+  }
+  @else{
+    --hlx-border-color-#{$type}: #{map.get($--border-color, $type)};
+  }
+}
+@mixin set-css-line-height-type($type) {
+  @if $type == ''{
+  --hlx-line-height: #{map.get($--line-height,$type)};
+  }
+  @else{
+
+    --hlx-line-height-#{$type}: #{map.get($--line-height, $type)};
+  }
+}
+@mixin set-css-font-type($type) {
+  @if $type == type {
+    --hlx-font-#{$type}-content: #{map.get($--font, $type,'content')};
+    --hlx-font-#{$type}-title: #{map.get($--font, $type,'title')};
+  }
+  @if $type == header-size {
+    --hlx-font-#{$type}: #{map.get($--font, $type,'')};
+    --hlx-font-#{$type}-sm: #{map.get($--font, $type,'sm')};
+    --hlx-font-#{$type}-lg: #{map.get($--font, $type,'lg')};
+    --hlx-font-#{$type}-xl: #{map.get($--font, $type,'xl')};
+    --hlx-font-#{$type}-xxl: #{map.get($--font, $type,'xxl')};
+  }
+  @if $type == content-size {
+    --hlx-font-#{$type}: #{map.get($--font, $type,'')};
+    --hlx-font-#{$type}-sm: #{map.get($--font, $type,'sm')};
+    --hlx-font-#{$type}-lg: #{map.get($--font, $type,'lg')};
+    --hlx-font-#{$type}-xl: #{map.get($--font, $type,'xl')};
+    --hlx-font-#{$type}-xxl: #{map.get($--font, $type,'xs')};
+  }
+}
+
+@mixin set-css-var-value($name, $value) {
+    #{joinVarName($name)}: #{$value};
+  }
+@mixin get-css-value($name, $value) {
+    #{joinVarName($name)}: #{$value};
+  }
+@mixin set-css-color-rgb($type) {
+
+    
+    $color: map.get($--colors, $type, 'base');
+    @debug "color #{$color}";
+    @include set-css-var-value(
+      ('color', $type, 'rgb'),
+      #{red($color),
+      green($color),
+      blue($color)}
+    );
+  
+  }
+// @mixin set-css-border-color-rgb($type) {
+//     $color: map.get($--border-color, $type);
+//     // @if $color == null{
+
+//     //   $color:map.get($--border-color, $type,'light');
+//     // }
+//     @debug "color #{$color}";
+//     @include set-css-var-value(
+//       ('color', $type, 'rgb'),
+//       #{red($color),
+//       green($color),
+//       blue($color)}
+//     );
+//   }

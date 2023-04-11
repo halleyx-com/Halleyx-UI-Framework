@@ -1,0 +1,48 @@
+#hlx-progress-bar-001hlx.progress-bar-container {
+  /* border: 1px solid #d4d4d4; */
+  height: 10px;
+  border-radius: 20px;
+  background: var(--hlx-border-color-light);
+  position: relative;
+  /* overflow: hidden; */
+  & > span.bar {
+    position: absolute;
+    height: 100%;
+    margin: 0;
+    left: 0;
+    border-radius: 5px;
+    // box-shadow: 1px 6px 9px -3px;
+    background-color: var(--hlx-color-primary);
+    &.tooltip-track {
+      &::after {
+        right: 0;
+        content: attr(progress-data);
+        position: absolute;
+        width: 44px;
+        height: 25px;
+        background-color: var(--hlx-text-color-tree);
+        color: var(--hlx-color-white);
+        text-align: center;
+        transform: translate(39%);
+        border-radius: 4px;
+        display: flex;
+        z-index: 1;
+        font-size: 12px;
+        top: 158%;
+        margin: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -11px;
+        border-top: 8px solid var(--hlx-text-color-tree);
+        transform: rotate(315deg);
+        border-left: 8px solid rgba(0, 0, 0, 0);
+      }
+    }
+  }
+}

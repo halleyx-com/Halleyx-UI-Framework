@@ -1,0 +1,36 @@
+@use './config.scss';
+
+@function -font-path($devs) {
+  @if $devs == true {
+    @return "/src/assets/fonts";
+    @debug "divider offset: /src/assets/fonts";
+  }
+  @debug "divider offset: /nodemode/assets/fonts";
+
+  @return "/node_modules/halley-kit/dist/src/assets/fonts";
+}
+@function joinVarName($list) {
+  $name: '--' + config.$namespace;
+  @each $item in $list {
+    @if $item != '' {
+      $name: $name + '-' + $item;
+    }
+  }
+  @return $name;
+}
+
+// getCssVarName('button', 'text-color') => '--el-button-text-color'
+@function getCssVarName($args...) {
+  @return joinVarName($args);
+}
+// getCssValue('button', 'text-color') => '--el-button-text-color'
+@function getCssValue($args...) {
+  $value:joinVarName($args);
+  @debug "#{$value}";
+  @return $value;
+}
+
+// getCssVar('button', 'text-color') => var(--el-button-text-color)
+@function getCssVar($args...) {
+  @return var(#{joinVarName($args)});
+}

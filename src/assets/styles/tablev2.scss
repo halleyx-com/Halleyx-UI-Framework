@@ -1,0 +1,244 @@
+.pagination-container {
+    // display: grid;
+    // grid-template-columns: 200px auto;
+    align-items: center;
+    font-size: 14px !important;
+}
+tr:last-child{
+  td:first-child{
+    border-bottom-left-radius: 5px !important;
+  }
+  td:last-child{
+    border-bottom-right-radius: 5px !important;
+  }
+}
+td.fixed-column-left {
+  position: sticky !important;
+  z-index: 250 !important;
+  left: 0 !important;
+  background: white;
+  box-shadow: inset -8px 0px 12px -16px #222222;
+  text-overflow: ellipsis;
+      // overflow: hidden;
+      white-space: nowrap;
+}
+th.fixed-column-left {
+  position: sticky !important;
+  z-index: 300 !important;
+  left: 0 !important;
+  background: white;
+  box-shadow: inset -8px 0px 12px -16px #222222;
+  text-overflow: ellipsis;
+      // overflow: hidden;
+      white-space: nowrap;
+}
+td.fixed-column-right {
+  position: sticky !important;
+  z-index: 250 !important;
+  right: 0 !important;
+  background: white;
+  box-shadow: inset 8px 0px 12px -16px #222222;
+  text-overflow: ellipsis;
+      // overflow: hidden;
+      white-space: nowrap;
+}
+th.fixed-column-right {
+  position: sticky !important;
+  z-index: 300 !important;
+  right: 0 !important;
+  background: white;
+  box-shadow: inset 8px 0px 12px -16px #222222;
+  text-overflow: ellipsis;
+      // overflow: hidden;
+      white-space: nowrap;
+}
+
+.table-v2-container{
+  // height: 100%;
+  .hlxTableV2 {
+    thead .table-v2-merge-head th {
+      max-height: 40px  !important;
+      z-index: 260;
+      white-space: nowrap;
+    }
+    thead .table-v2-head th {
+      max-height: 40px  !important;
+      z-index: 260;
+      white-space: nowrap;
+    }
+  }
+}
+// ----------------------------------------- Basic table css -----------------------------------------
+.hlxTableV2 {
+    border-collapse: separate !important;
+    border-spacing: 0;
+    width: 100%; 
+  display: block;
+    overflow-x: auto;
+    overflow-y: auto;
+    white-space: nowrap; 
+  border-collapse: collapse;
+    font-family: "OpenSans";
+    background: white;
+    th,
+    td {
+      padding: 4px 8px;
+      font-weight: 100;
+      font-size: 14px;
+    }
+    th{
+      width: 100%;
+      min-width: 100px;
+      text-overflow: ellipsis;
+      // overflow: hidden;
+      white-space: nowrap;
+      height: 40px  !important;
+    }
+    td{
+      width: 1%;
+      min-width: max-content;
+      text-overflow: ellipsis;
+      // overflow: hidden;
+      white-space: nowrap;
+      height: 40px !important;
+    }
+  }
+  
+  // ----------------------------------------- Bold headers css -----------------------------------------
+  .boldHeaders {
+    th {
+      font-weight: bold;
+    }
+  }
+  
+  // ----------------------------------------- Borders css -----------------------------------------
+  
+  .tableBorder {
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+  }
+  
+  .headerBorder {
+    th {
+      border-bottom: 1px solid #d8d8d8;
+    }
+  }
+  
+  .verticalBorder {
+    th,
+    td {
+      border-right: 1px solid #d8d8d8;
+    }
+    th:last-child,
+    td:last-child {
+      border-right: none;
+    }
+  }
+  
+  .horizontalBorder {
+    td {
+      border-bottom: 1px solid #d8d8d8;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+  }
+  
+  // ----------------------------------------- Borders css -----------------------------------------
+  .rowHover {
+      tr:hover {
+          background: #e4fff5;
+      }
+  }
+  
+  // ----------------------------------------- Theme css -----------------------------------------
+  .lightTheme {
+      th {
+          background: white;
+      }
+  }
+  .primaryTheme {
+      th {
+          background: #54bd95;
+          color: black;
+      }
+  }
+  .greyTheme {
+      th {
+          background: #edecec;
+          color: black;
+      }
+  }
+  
+  // ----------------------------------------- striped row css -----------------------------------------
+  
+  .stripedRow {
+      tr:nth-child(even) {
+          background: #e4fff5;
+      }
+  }
+
+
+  // --------------------------------------------Sort-icon ---------------------------------------------------
+.table-head{
+  display: flex;
+  .table-sort{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+      .icon-filled-arrow-up{
+        font-size: 10px;
+        position: absolute;
+        top:5px;
+      }
+      .icon-filled-arrow-down{
+        font-size: 10px;
+        position: absolute;
+        top:11px;
+      }
+
+    i{
+      font-size: 12px;
+      margin-left:5px;
+      cursor: pointer;
+      &:hover{
+        color:var(--hlx-color-primary-dark)
+      }
+    }
+  }
+}
+
+.sorting-icon{
+  color: #265E4B;
+
+}
+
+.icon-vertical-dots{
+  font-size: 20px;
+  position: relative;
+  cursor: pointer;
+  &:hover{
+    background-color: var(--hlx-color-primary-light);
+    border-radius: 20px;
+  }
+}
+
+
+.icon-gear{
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.action-gear {
+  width:100%;
+  display:flex;
+  justify-content:center
+}
+
+.example-2-style {
+  margin-top: -116px;
+  margin-left: -65px;
+  position: relative;
+}

@@ -1,0 +1,113 @@
+.sidenav-right, .sidenav-left {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box; 
+    // height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    transition: width 0.2s;
+    padding: 10px;
+    font-size: 14px;
+    display: none;
+}
+.sidenav-top {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: width 0.2s;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 14px;
+}
+.sidenav-bottom {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: width 0.2s;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.header-panel-right, .header-panel-left, .header-panel-top, .header-panel-bottom{
+  height: 7vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .title-right, .title-left, .title-top, .title-bottom{
+      min-width: 70px;
+  }
+}
+.body-panel-right, .body-panel-left{
+  height: 84vh;
+  padding: 20px 0px;
+}
+.footer-panel-right, .footer-panel-left{
+  height: 6vh;
+}
+
+.header-panel-top, .header-panel-bottom{
+  height: 15%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .title-right, .title-left, .title-top, .title-bottom{
+      min-width: 70px;
+  }
+}
+.body-panel-top, .body-panel-bottom{
+  padding: 20px 0px;
+  height: 70%;
+}
+.footer-panel-top, .footer-panel-bottom{
+  height: 15%;
+}
+
+
+.sidenav-margin-right, .sidenav-margin-left{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  background-color: #000;
+  opacity: 50%;
+  overflow-x: hidden;
+}
+.sidenav-margin-top{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 50%;
+  overflow-x: hidden;
+}
+.sidenav-margin-bottom{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 50%;
+  overflow-x: hidden;
+}

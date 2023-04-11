@@ -1,0 +1,41 @@
+.rating-group {
+  display: inline-flex;
+  height: 40px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 7px;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--hlx-icon-size-lg);
+}
+
+//   /* make hover effect work properly in IE */
+//   .rating__icon {
+//     pointer-events: none;
+//   }
+.full-star[read="false"] {
+  // background-color: red;
+  .rating__label:hover:not([class="rated"]) {
+    display: block;
+    // background: #000;
+  }
+}
+.rate-star-wrapper {
+  margin-left: -4%;
+}
+
+/* hide radio inputs */
+
+.rating__input {
+  position: absolute !important;
+  left: -9999px !important;
+}
+
+/* set icon padding and size */
+.rating__label {
+  cursor: pointer;
+  color: var(--hlx-color-primary);
+  // padding: 0 0.1em;
+  font-size: var(--hlx-icon-size-lg);
+  display: inline;
+}

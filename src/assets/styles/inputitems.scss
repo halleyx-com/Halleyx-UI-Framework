@@ -1,0 +1,296 @@
+
+input[type=checkbox]:checked {
+    content: "\e964";
+  }
+  // .list-group-item {
+  //   cursor: move;
+  // }
+  // .list-group-item i {
+  //   cursor: pointer;
+  // }
+  
+  /* The container */
+  .check-container {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .select-all-theme{
+    background: var(--hlx-color-primary) !important;
+    border: 1px solid var(--hlx-color-primary) !important
+  }
+  .select-all-grey{
+    background: var(--hlx-border-color-lighter) !important;
+    border: 1px solid var(--hlx-border-color) !important
+  }
+  .select-all-theme-hover:hover{
+    border: 1px solid var(--hlx-color-primary)
+  }
+  label.check-container:hover{
+    .checkmark {
+    border: 1px solid var(--hlx-color-primary);
+    }
+    // color:var(--hlx-color-primary);
+  }
+  /* Hide the browser's default checkbox */
+  .check-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .partially-checked{
+    color: white;
+    font-size: 14px;
+    position: relative;
+    left: -76px;
+    z-index: 100;
+    top: 1px;
+    font-weight: bold;
+  }
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    left: 5px;
+    bottom: 6px;
+    height: 16px;
+    width: 16px;
+    background-color: var(--hlx-border-color-lighter);
+    border-radius: 3px;
+    border: 1px solid var(--hlx-border-color);
+  }
+  
+  /* On mouse-over, add a grey background color */
+  // .check-container:hover input ~ .checkmark {
+    // background-color:#FFF1D3;
+  // }
+  .check-container input:disabled:checked ~ .checkmark {
+    cursor:not-allowed;
+    background: var(--hlx-border-color-lighter);
+    border: 1px solid var(--hlx-border-color);
+  }
+  .check-container input:disabled ~ .checkmark {
+    cursor:not-allowed;
+    background: var(--hlx-border-color-lighter);
+  }
+  .check-container input:disabled:checked ~ .checkmark:after {
+      left: 5px;
+      top: 2px;
+      width: 3px;
+      height: 7px;
+      border: solid var(--hlx-border-color);
+      border-radius: 1px;
+      border-width: 0 2px 2px 0px;
+      transform: rotate(45deg);
+  
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .check-container input:checked ~ .checkmark {
+    background-color: var(--hlx-color-primary);
+    border: 1px solid var(--hlx-color-primary);
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .check-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .check-container .checkmark:after {
+        left: 5px;
+      top: 2px;
+      width: 3px;
+      height: 7px;
+      border: solid white;
+      border-radius: 1px;
+      border-width: 0 2px 2px 0px;
+      transform: rotate(45deg);
+  }
+  
+  /////////////////////////////////////////////////////
+  
+  /* The container */
+  .radio-container {
+    display: flex;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    height: 30px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  label.radio-container:hover {
+  .radio-checkmark {
+    border: 1px solid var(--hlx-color-primary);
+  }
+
+  }
+  /* Hide the browser's default radio button */
+  .radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .radio-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: var(--hlx-border-color-lighter);
+    border-radius: 50%;
+    border: 1px solid var(--hlx-border-color);
+  }
+  
+  /* On mouse-over, add a grey background color */
+  // .radio-container:hover input ~ .radio-checkmark {
+    // background-color: #FFF1D3;
+  // }
+  
+  /* When the radio button is checked, add a blue background */
+  .radio-container input:checked ~ .radio-checkmark {
+    border:1px solid var(--hlx-color-primary);
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .radio-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .radio-container input:checked ~ .radio-checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .radio-container .radio-checkmark:after {
+    top: 3px;
+      left: 3px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--hlx-color-primary);
+  }
+  
+  ///////////////////////////////////////////////////////////////////////////////
+  ///
+  
+  label[class^="switch"] {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 25px;
+  }
+  
+  label[class^='switch'] input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: -8px;
+    right: 0;
+    bottom: 0;
+    background-color: #e2e2e2;
+    -webkit-transition: .4s;
+    transition: .4s;
+    // box-shadow: 0px 0px 8px -1px $grey;
+    border: 1px solid var(--hlx-border-color);
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 3px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.4s;
+    // box-shadow: 0px 0px 8px -1px $grey;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--hlx-color-primary);
+    // box-shadow: 0px 0px 8px -1px $grey;
+    border: 1px solid var(--hlx-color-primary);
+  }
+  input:checked + .slider:hover {
+    background-color: var(--hlx-color-primary);
+    // box-shadow: 0px 0px 8px -1px $grey;
+    border: 1px solid var(--hlx-color-primary);
+    .slider.round:before{
+      background: var(--hlx-color-primary);
+    }
+  }
+  
+  input:focus + .slider {
+    // box-shadow: 0 0 1px white;
+    // box-shadow: 0px 0px 8px -1px $grey;
+    // border: 1px solid var(--hlx-color-primary);
+  }
+  input + .slider:hover {
+    // box-shadow: 0 0 1px white;
+    // box-shadow: 0px 0px 8px -1px $grey;
+    border: 1px solid var(--hlx-color-primary);
+    .slider.round:before{
+      background: var(--hlx-color-primary);
+    }
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    background: white;
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 50px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .partial-check {
+      color: white !important;
+      font-size: 14px !important;
+      position: absolute !important;
+      font-weight: bold !important;
+      top: 9px !important;
+      left: 6px !important;
+      z-index: 100 !important;
+  }

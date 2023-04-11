@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="color-palette" transform="translate(-133 -614)">
+    <path id="circle-template" d="M13.1,2A11.1,11.1,0,0,0,2,13.1c0,2.966,7.315.259,9.412,2.356s-1.275,8.747,1.691,8.747A11.1,11.1,0,0,0,20.953,5.252,11.03,11.03,0,0,0,13.1,2m0-2a13.1,13.1,0,1,1,0,26.205c-1.744,0-3.154-1.393-3.318-3.714-.124-1.733,1-4.344-.291-5.58-.926-.883-3.764-.242-5.812-.407C1.446,16.325,0,15.316,0,13.1A13.1,13.1,0,0,1,13.1,0Z" transform="translate(139.897 620.897)" fill="#191a15"/>
+    <g id="Group_157" data-name="Group 157" transform="translate(-1075 51)">
+      <g id="Group_156" data-name="Group 156" transform="translate(-54.594 -1.594)">
+        <circle id="Ellipse_4" data-name="Ellipse 4" cx="2" cy="2" r="2" transform="translate(1274.784 579.588)" fill="red"/>
+        <circle id="Ellipse_5" data-name="Ellipse 5" cx="2" cy="2" r="2" transform="translate(1279.568 575.588)" fill="#0f6"/>
+        <circle id="Ellipse_6" data-name="Ellipse 6" cx="2" cy="2" r="2" transform="translate(1285.548 577.98)" fill="#0008ff"/>
+        <circle id="Ellipse_7" data-name="Ellipse 7" cx="2" cy="2" r="2" transform="translate(1287.94 583.96)" fill="#ffa200"/>
+        <circle id="Ellipse_8" data-name="Ellipse 8" cx="2" cy="2" r="2" transform="translate(1283.568 588.94)" fill="#f0c"/>
+      </g>
+      <circle id="Ellipse_9" data-name="Ellipse 9" cx="20" cy="20" r="20" transform="translate(1208 563)" fill="none"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,296 @@
+
+
+input[type="date"] {
+  position: relative;
+}
+input[type="number"]:disabled{
+  cursor: not-allowed;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: transparent;
+  background: none;
+  z-index: 1;
+  min-width: 35px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.input-field input[type="date"]{
+  padding: 0 0 0 15px;
+}
+input[type="date"]:before {
+  font-size: 18px;
+  color: transparent;
+  background: none;
+  display: block;
+  font-family: 'halleyx-icons';
+  content: '\e913';
+  /* This is the calendar icon in FontAwesome */
+  position: absolute;
+  right: 9px;
+  color: #565553;
+}
+input[type="datetime-local"] {
+  position: relative;
+}
+
+.phone-number{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  color: transparent;
+  background: none;
+  z-index: 1;
+  min-width: 35px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.input-field input[type="datetime-local"]{
+  padding: 0 0 0 15px;
+}
+
+input[type="datetime-local"]:before {
+  font-size: 18px;
+  color: transparent;
+  background: none;
+  display: block;
+  font-family: 'halleyx-icons';
+  content: '\e913';
+  /* This is the calendar icon in FontAwesome */
+  position: absolute;
+  right: 9px;
+  color: #565553;
+}
+*,
+*:focus {
+  outline: none;
+}
+.input-field.small {
+  position: relative;
+  display: flex;
+  width: 100%;
+  .input-icon {
+    min-width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i {
+      font-size: var(--hlx-icon-size-md) !important;
+      color: #565553;
+    }
+  }
+}
+::-webkit-input-placeholder {
+  font-family: OpenSans;
+  font-size: 14px;
+  color: var(--hlx-border-color-dark);
+}
+input[type="password"] {
+  font-family: Verdana;
+}
+.input-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // background: white;
+  position: relative;
+}
+.input-field.small input {
+  display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+  width: 100%;
+  height: 36px;
+  color: #565553;
+  background: transparent;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  padding: 10px 12px 10px 12px;
+  line-height: 18.15px;
+  letter-spacing: 0.5%;
+}
+.input-field.small textarea {
+  font-size: 14px;
+  font-family: 'OpenSans';
+  display: block;
+  width: 100%;
+  min-height: 66px;
+  background: transparent;
+  border-radius: 0px;
+  border: none;
+  transition: all 0.3s ease;
+  margin: 10px 12px;
+  resize: vertical;
+  color: var(--hlx-text-color-primary);
+  textarea:disabled {
+    cursor: not-allowed;
+  }
+}
+.input-field.small {
+  border: solid 1px var(--hlx-border-color);
+  border-radius: 5px;
+  background-color: white;
+}
+.input-field.small:hover {
+  border: 1px solid var(--hlx-color-primary);
+}
+.disabled:hover {
+  border: 1px solid var(--hlx-border-color) !important;
+  input{
+  cursor: not-allowed;
+  }
+}
+
+// .input-field input:focus {
+//   border-color: red !important;
+// }
+
+.input-field.small:focus-within{
+  border-color: var(--hlx-color-primary);
+}
+.input-field.small textarea:focus {
+  border-color: var(--hlx-color-primary);
+}
+
+.input-field.small label {
+  position: absolute;
+  cursor: text;
+  z-index: 2;
+  top: 8px;
+  left: 6px;
+  font-size: 14px;
+  background: #fff;
+  padding: 0 5px;
+  color: var(--hlx-border-color-dark);
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.input-field.small input:focus + label,
+.input-field.small input:valid + label {
+  font-size: 12px;
+  top: -9px;
+}
+.input-field.small textarea:focus + label,
+.input-field.small textarea:valid + label {
+  font-size: 12px;
+  top: -9px;
+}
+
+.input-field.small input:focus + label {
+  color: var(--hlx-color-primary);
+}
+.input-field.small textarea:focus + label {
+  color: var(--hlx-color-primary);
+}
+
+.error-message {
+  width: 100%;
+  height: 20px;
+  color: #fe4141;
+  font-size: 10px;
+  text-align: left;
+  position: relative;
+}
+
+.condition-box {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  justify-content: space-between;
+  i {
+    margin-left: 10px;
+  }
+}
+.password-conditon-dialog-title {
+  font-family:var(--hlx-);
+  font-weight: bold;
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 8px;
+}
+.password-condition-dialog {
+  padding: 10px 12px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+  position: absolute;
+  z-index: 5;
+  margin-top: 50px;
+  color: #565553;
+  // width: 92%;
+  // margin-top: -15px;
+  // margin-left: -5px;
+}
+
+.drop {
+  font-size: 14px;
+  width: 100%;
+  position: absolute;
+  padding: 0 10px 0 10px;
+  max-height: 400px;
+  overflow-y: scroll;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  /* width: 250px; */
+  z-index: 132;
+  margin-top: 45px;
+  background: white;
+  ul{
+    li{
+      padding: 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+.caret-div {
+  position: absolute;
+  max-width: 400px;
+  max-height: 400px;
+  background-color: white;
+  border: 1px solid #d8d8d8;
+  border-radius: 3px;
+  font-size: 14px;
+  color: var(--hlx-text-color-primary);
+  overflow: auto;
+  z-index: 1000;
+  li{
+    padding: 3px 7px;
+    height: 30px;
+    &:hover{
+      cursor: pointer;
+      background: var(--hlx-color-primary-light);
+    }
+  }
+  .list-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* align-content: center; */
+    flex-direction: row;
+  }
+  .list-item-icon {
+    font-size: 22px;
+    margin-right: 5px;
+  }
+}

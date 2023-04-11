@@ -1,0 +1,45 @@
+@import "./common/var.scss";
+//Roboto Slab
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500&display=swap");
+//Merriweather
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700;1,900&display=swap");
+//Playfair Display and lora
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap");
+// PT Serif
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+//Best Sans Serif Fonts
+//Montserrat
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+//Poppins
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+//Best Display Fonts
+//Bebas neue
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+//mono space fonts
+//roboto mono
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,400;0,500;0,700;1,100;1,200;1,700&display=swap");
+
+@font-face {
+  font-family: Opensans;
+  src: url("#{$font-path}/OpenSans.ttf") format("opentype");
+  // src: url("#{$font-path}/OpenSans.ttf") format("opentype");
+}
+@font-face {
+  font-family: QuickSand;
+  src: url("#{$font-path}/Quicksand.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: Pacifico;
+  src: url("#{$font-path}/Pacifico.ttf") format("opentype");
+}
+@font-face {
+  font-family: OstrichSans;
+  src: url("#{$font-path}/ostrich-regular.ttf") format("opentype");
+}
+@font-face {
+  font-family: JosefinSans;
+  src: url("#{$font-path}/JosefinSans-Regular.ttf") format("opentype");
+}
