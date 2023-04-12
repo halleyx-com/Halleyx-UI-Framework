@@ -3,7 +3,7 @@
  <a style="text-decoration: none;cursor:pointer;color:black;" 
  href="https://components.halleyx.com" 
  > 
- <img src="https://halleyx.com/img/logo.png" style="object-fit:fit;width:25px"> 
+ <img src="https://halleyx.com/img/logo.png" style="object-fit:fit;width:4%;"> 
  Halleyx UI Framework
  </a>
 
