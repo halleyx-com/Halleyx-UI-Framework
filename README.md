@@ -1,10 +1,15 @@
 <h1 align="center"
  style="display:flex:align-item:center;">
- <img src="./src/assets/img/logo.png" style="object-fit:fit;width:25px"> HalleyxUI
-</h1>
-<h4 align="center">
+ <a style="text-decoration: none;cursor:pointer;color:black;" 
+ href="https://components.halleyx.com" 
+ > 
+ <img src="https://halleyx.com/img/logo.png" style="object-fit:fit;width:25px"> 
+ Halleyx UI Framework
+ </a>
 
-The real McCoy thing
+</h1>
+
+<h4 align="center">
 
 [![NPM][npm-badge]][npm-url]
 [![HalleyxUI][ci-badge]][ci-url]
@@ -81,14 +86,14 @@ The following components are currently available for use
 
 ## Installation
 <p style="display:flex;align-item:center;">
-<b>NPM</b> <img src="https://badge.fury.io/js/halley-kit.svg" style="margin-left:10px;">
+<b>NPM</b> <img src="https://badge.fury.io/js/halleyx-ui-framework.svg" style="margin-left:10px;">
 </p>
 
 ```
 npm install halleyx-ui-framework
 ```
 ## Quick start
-&emsp;This section describes how to use <strong>Halleyx UI framework</strong> in your project.
+This section describes how to use <strong>Halleyx UI framework</strong> in your project.
 
  **Global import**
 
@@ -97,9 +102,9 @@ Config module with project globally
 //main.js
 import { createApp } from "vue";
 import App from "./App.vue";
-import halleyxComponents from "halleyx-ui";
+import halleyxComponents from "halleyx-ui-framework";
 //load the styles
-import 'halley-kit/dist/umd/index.css';
+import 'halleyx-ui-framework/dist/cs/index.css';
 createApp(App).use(halleyxComponents).mount("#app");
 ```
 **Local import**
@@ -110,9 +115,9 @@ Config module with project locally
 //main.js
 import { createApp } from "vue";
 import App from "./App.vue";
-import halleyxComponents from "halleyx-ui";
+import halleyxComponents from "halleyx-ui-framework";
 //load the styles
-import 'halley-kit/dist/umd/index.css';
+import 'halleyx-ui-framework/dist/cs/index.css';
 createApp(App).use(halleyxComponents).mount("#app");
 ```
 ```
@@ -122,30 +127,30 @@ createApp(App).use(halleyxComponents).mount("#app");
 </template>
 
 <script>
-import {HlxButton} from 'halley-kit';
+import {HlxButton} from 'halleyx-ui-framework';
 export default {
   name: 'App',
   components: {
     HlxButton,
   },
 }
-<\/script>
+</script>
 ```
 
 
 
 ## License
-Tenzir UI-Component Library comes with a [3-clause BSD license][license-url].
+Halleyx UI Framework Library comes with a [3-clause BSD license][license-url].
 
 <!-- Github -->
-[ci-url]: https://github.com/halleyx-com/UI-kit.git
-[ci-badge]: https://badgen.net/badge/icon/HalleyKit?icon=github&label
+[ci-url]: https://github.com/halleyx-com/Halleyx-UI-Framework
+[ci-badge]: https://badgen.net/badge/icon/Halleyx-UI-Framework?icon=github&label
 <!-- NPM -->
-[npm-badge]: https://badgen.net/badge/icon/halley-kit?icon=npm&label
-[npm-url]: https://www.npmjs.com/package/halley-kit
+[npm-badge]: https://badgen.net/badge/icon/halleyx-ui-framework?icon=npm&label
+[npm-url]: https://www.npmjs.com/package/halleyx-ui-framework
 <!-- License -->
 [license-badge]: https://img.shields.io/badge/license-BSD-blue.svg
-[license-url]: https://github.com/tenzir/ui-components/blob/master/COPYING
+[license-url]: https://github.com/halleyx-com/Halleyx-UI-Framework/blob/main/LICENSE
 [alpha-badge]: https://img.shields.io/badge/stage-alpha-blueviolet
 <!-- Future -->
 [contributing-url]: 
