@@ -1,26 +1,28 @@
 <h1 align="center"
  style="display:flex:align-item:center;">
- <a style="text-decoration: none;cursor:pointer;color:black;" 
+ <a style="text-decoration: none;cursor:pointer;color:black;" align="center"
  href="https://components.halleyx.com" 
  > 
- <img src="https://halleyx.com/img/logo.png" style="object-fit:fit;width:4%;" alt=""> 
- Halleyx UI Framework
+ <img src="https://halleyx.com/img/HalleyxUIFramework.png" style="object-fit:fit;width:100%;" alt=""> 
  </a>
 
 </h1>
 
-<h4 align="center">
-
+<h4 align="center" style="display:flex:align-item:center;text-align:center;">
+ 
 [![NPM][npm-badge]][npm-url]
-[![HalleyxUI][ci-badge]][ci-url]
+[![Halleyx UI Framework][ci-badge]][ci-url]
 [![Development Status][alpha-badge]][npm-url]
 [![License][license-badge]][license-url]
-
+ 
+</h4>
+<h4  align="center" style="display:flex:align-item:center;text-align:center;">
+ 
 [_Introduction_](#introduction) &mdash;
 [_Components_](#components) &mdash;
 [_Getting Started_](#quick-start) &mdash;
 [_License_](#license)
-
+ 
 </h4>
 
 ## Introduction
