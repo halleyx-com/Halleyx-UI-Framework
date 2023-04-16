@@ -1,8 +1,6 @@
 <h1 align="center"
  style="display:flex:align-item:center;">
- <a target="_blank" style="text-decoration: none;cursor:pointer;color:black;" align="center"
- href="https://components.halleyx.com"
- > 
+ <a  href="https://components.halleyx.com" target="_blank" style="text-decoration: none;cursor:pointer;color:black;" align="center"> 
  <img src="https://halleyx.com/img/HalleyxUIFramework.png" style="object-fit:fit;width:100%;" alt="Halleyx UI Framework"> 
  </a>
 
