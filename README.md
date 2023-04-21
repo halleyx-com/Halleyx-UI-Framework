@@ -1,7 +1,7 @@
 <h1 align="center"
  style="display:flex:align-item:center;">
  <a  href="https://components.halleyx.com" target="_blank" style="text-decoration: none;cursor:pointer;color:black;" align="center"> 
- <img src="https://halleyx.com/img/HalleyxUIFramework.png" style="object-fit:fit;width:100%;" alt="Halleyx UI Framework"> 
+ <img src="https://halleyx.com/static/images/HalleyxUIFramework.png" style="object-fit:fit;width:100%;" alt="Halleyx UI Framework"> 
  </a>
 
 </h1>
@@ -86,7 +86,7 @@ The following components are currently available for use
 
 ## Installation
 <p style="display:flex;align-item:center;">
-<b>NPM</b> <img src="https://badge.fury.io/js/halleyx-ui-framework.svg" style="margin-left:10px;">
+NPM
 </p>
 
 ```
