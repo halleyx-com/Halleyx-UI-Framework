@@ -30,7 +30,7 @@ Halleyx is a UI component framework completely designed by and for developers us
 
 We believe that a programmer can save some time if they find a library that works as desired and does not have to change its structure in accordance with the project. 
 
-Our main goal is to make programming less tedious by providing fully-built and customizable components that are simple to integrate. Big things comes in small packages. We have created 100+ flexible, modular components that accelerate development time and simplify the process of  creating visually stunning projects, without compromising the developer's independence and personalization
+Our main goal is to make programming less tedious by providing fully-built and customizable components that are simple to integrate. Big things comes in small packages. We have created 40+ flexible, modular components that accelerate development time and simplify the process of  creating visually stunning projects, without compromising the developer's independence and personalization
 
 So start designing with ease!
 
